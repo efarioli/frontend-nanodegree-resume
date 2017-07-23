@@ -229,16 +229,29 @@ var projects = {
             dates: "June 2017",
             description: "Video Searcher implementing youtube V3 API. The video are shown in the same web page using fancybox library. Technology applied: Html5, CSS, Javascript, Jquery, AJAX and use of 3rd party APIs.",
             images: [
+                "http://i.imgur.com/XbbFCqx.png",
                 "http://i.imgur.com/XbbFCqx.png"
             ]
         }
-
     ],
     display: function() {
         console.log("dsiplaying projects");
+        $("#projects").append(HTMLprojectStart);
+        this.projects.forEach(function(el) {
+            $("#projects").append(HTMLprojectStart);
+            var titleFormatted = HTMLprojectTitle.replace("%data%", el.title);
+            $(".project-entry:last").append(titleFormatted);
+            var datesFormatted = HTMLprojectDates.replace("%data%", el.dates);
+            $(".project-entry:last").append(datesFormatted);
+            var descriptionFormatted = HTMLprojectDescription.replace("%data%", el.description);
+            $(".project-entry:last").append(descriptionFormatted);
+            el.images.forEach(function(e) {
+                var imagesFormatted = HTMLprojectImage.replace("%data%", e);
+                $(".project-entry:last").append(imagesFormatted);
+            });
+        });
     }
-
-
 };
 work.display();
 bio.display();
+projects.display();

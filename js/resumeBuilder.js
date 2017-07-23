@@ -178,12 +178,8 @@ var work = {
             $(".work-entry:last").append(dateFormatted);
             var locationFormatted = HTMLworkLocation.replace("%data%", el.location);
             $(".work-entry:last").append(locationFormatted);
-            var locationFormatted = HTMLworkLocation.replace("%data%", el.location);
-            $(".work-entry:last").append(locationFormatted);
             var descriptionFormatted = HTMLworkDescription.replace("%data%", el.description);
             $(".work-entry:last").append(descriptionFormatted);
-
-
         });
     }
 };

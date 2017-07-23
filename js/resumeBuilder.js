@@ -28,15 +28,15 @@ var bio = {
         HTMLheaderName = HTMLheaderName.replace("%data%", this.name);
         $("#header").prepend(HTMLheaderName);
         HTMLmobile = HTMLmobile.replace("%data%", this.contacts.mobile);
-        $("#topContacts").append(HTMLmobile);
+        $("#topContacts , #footerContacts").append(HTMLmobile);
         HTMLemail = HTMLemail.replace("%data%", this.contacts.email);
-        $("#topContacts").append(HTMLemail);
+        $("#topContacts , #footerContacts").append(HTMLemail);
         HTMLgithub = HTMLgithub.replace("%data%", this.contacts.github);
-        $("#topContacts").append(HTMLgithub);
+        $("#topContacts , #footerContacts").append(HTMLgithub);
         HTMLtwitter = HTMLtwitter.replace("%data%", this.contacts.twitter);
-        $("#topContacts").append(HTMLtwitter);
+        $("#topContacts , #footerContacts").append(HTMLtwitter);
         HTMLlocation = HTMLlocation.replace("%data%", this.contacts.location);
-        $("#topContacts").append(HTMLlocation);
+        $("#topContacts , #footerContacts").append(HTMLlocation);
         HTMLbioPic = HTMLbioPic.replace("%data%", this.pic);
         $("#header").append(HTMLbioPic);
         HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
@@ -277,3 +277,4 @@ work.display();
 bio.display();
 projects.display();
 education.display();
+

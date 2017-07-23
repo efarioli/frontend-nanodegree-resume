@@ -48,7 +48,6 @@ var bio = {
         });
     }
 };
-bio.display();
 
 var education = {
     schools: [{
@@ -129,26 +128,43 @@ var work = {
             employer: "Asda logistics",
             title: "Warehouse Colleague",
             location: "Newcastle Under Lyme- UK",
-            dates: "since february 2015"
+            dates: "since february 2015",
+            description: "Taking delivery of goods and storing them -checking for damaged or missing items - moving stock by hand or with machines- packing and wrapping goods - loading goods for sending - keeping stock records -cleaning the warehouse"
         },
         {
             employer: "New Look",
             title: "Warehouse Colleague",
             location: "Newcastle Under Lyme- UK",
-            dates: "From August 2012 february 2015."
+            dates: "From August 2012 february 2015.",
+            description: "Taking delivery of goods and storing them -checking for damaged or missing items - moving stock by hand or with machines- packing and wrapping goods - loading goods for sending - keeping stock records -cleaning the warehouse"
         },
         {
             employer: "Self Employed",
             title: "Cyber Cafe Attendant",
             location: "Malaga - Spain",
-            dates: "From february 2009 August 2015."
+            dates: "From february 2009 August 2015.",
+            description: "Use the cash register, attend the phone, check in and checkout customer, assist customer, sell sweets, send and receive faxes, maintenance of hardware and software, deal with suppliers, et cetera."
         }
     ],
     display: function() {
         console.log("displaying jobs..");
+        this.jobs.forEach(function(el) {
+            $("#workExperience").append(HTMLworkStart);
+            var employerFormatted = HTMLworkEmployer.replace("%data%", el.employer);
+            var titleFormatted = HTMLworkTitle.replace("%data%", el.title);
+            $(".work-entry:last").append(employerFormatted + titleFormatted);
+            var dateFormatted = HTMLworkDates.replace("%data%", el.dates);
+            $(".work-entry:last").append(dateFormatted);
+            var locationFormatted = HTMLworkLocation.replace("%data%", el.location);
+            $(".work-entry:last").append(locationFormatted);
+            var locationFormatted = HTMLworkLocation.replace("%data%", el.location);
+            $(".work-entry:last").append(locationFormatted);
+            var descriptionFormatted = HTMLworkDescription.replace("%data%", el.description);
+            $(".work-entry:last").append(descriptionFormatted);
+
+
+        });
     }
-
-
 };
 
 var projects = {
@@ -224,3 +240,5 @@ var projects = {
 
 
 };
+work.display();
+bio.display();

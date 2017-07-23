@@ -23,34 +23,32 @@ var bio = {
     pic: "images/fry.jpg",
     display: function() {
         console.log("displaying Bio");
+        HTMLheaderRole = HTMLheaderRole.replace("%data%", this.role);
+        $("#header").prepend(HTMLheaderRole);
+        HTMLheaderName = HTMLheaderName.replace("%data%", this.name);
+        $("#header").prepend(HTMLheaderName);
+        HTMLmobile = HTMLmobile.replace("%data%", this.contacts.mobile);
+        $("#topContacts").append(HTMLmobile);
+        HTMLemail = HTMLemail.replace("%data%", this.contacts.email);
+        $("#topContacts").append(HTMLemail);
+        HTMLgithub = HTMLgithub.replace("%data%", this.contacts.github);
+        $("#topContacts").append(HTMLgithub);
+        HTMLtwitter = HTMLtwitter.replace("%data%", this.contacts.twitter);
+        $("#topContacts").append(HTMLtwitter);
+        HTMLlocation = HTMLlocation.replace("%data%", this.contacts.location);
+        $("#topContacts").append(HTMLlocation);
+        HTMLbioPic = HTMLbioPic.replace("%data%", this.pic);
+        $("#header").append(HTMLbioPic);
+        HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
+        $("#header").append(HTMLwelcomeMsg);
+        $("#header").append(HTMLskillsStart);
+        this.skills.forEach(function(el) {
+            var HTMLskillsFormatted = HTMLskills.replace("%data%", el);
+            $("#skills").append(HTMLskillsFormatted);
+        });
     }
 };
-HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
-$("#header").prepend(HTMLheaderRole);
-HTMLheaderName = HTMLheaderName.replace("%data%", bio.name);
-$("#header").prepend(HTMLheaderName);
-HTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#topContacts").append(HTMLmobile);
-HTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#topContacts").append(HTMLemail);
-HTMLgithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#topContacts").append(HTMLgithub);
-HTMLtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#topContacts").append(HTMLtwitter);
-HTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#topContacts").append(HTMLlocation);
-
-HTMLbioPic = HTMLbioPic.replace("%data%", bio.pic);
-$("#header").append(HTMLbioPic);
-HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(HTMLwelcomeMsg);
-$("#header").append(HTMLskillsStart);
-
-bio.skills.forEach(function(el){
-    var HTMLskillsFormatted = HTMLskills.replace("%data%", el);
-    $("#skills").append(HTMLskillsFormatted);
-});
-
+bio.display();
 
 var education = {
     schools: [{

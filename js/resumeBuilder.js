@@ -56,16 +56,9 @@ var education = {
             degree: "foundation degree in Computer Science",
             majors: "",
             dates: "1998-2001",
-            url: ""
-        },
-        {
-            name: "",
-            location: "",
-            degree: "",
-            majors: "",
-            dates: "13-09-1980",
-            url: ""
+            url: "http://www.icop.edu.ar/"
         }
+
     ],
     onlineCourses: [{
             title: "Learning React.js",
@@ -119,8 +112,22 @@ var education = {
     ],
     display: function() {
         console.log("displaying online courses");
-    }
+        $("#education").append(HTMLschoolStart);
+        this.schools.forEach(function(el) {
+            var schoolNameFormatted = HTMLschoolName.replace("%data%", el.name);
+            $(".education-entry:last").append(schoolNameFormatted);
+            var schoolDegreeFormatted = HTMLschoolDegree.replace("%data%", el.degree);
+            $(".education-entry:last").append(schoolDegreeFormatted);
+            var schoolDatesFormatted = HTMLschoolDates.replace("%data%", el.dates);
+            $(".education-entry:last").append(schoolDatesFormatted);
+            var schoolLocationFormatted = HTMLschoolLocation.replace("%data%", el.location);
+            $(".education-entry:last").append(schoolLocationFormatted);
+            var schoolMajorFormatted = HTMLschoolMajor.replace("%data%", el.majors);
+            $(".education-entry:last").append(schoolMajorFormatted);
+            $(".education-entry:last").find("a").attr("href", el.url);
 
+        });
+    }
 };
 
 var work = {
@@ -255,3 +262,4 @@ var projects = {
 work.display();
 bio.display();
 projects.display();
+education.display();

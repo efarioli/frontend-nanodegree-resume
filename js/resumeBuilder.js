@@ -11,7 +11,7 @@ var bio = {
         twitter: "https://twitter.com/fariolie",
         location: "Stoke on Trent- UK"
     },
-    welcomeMessafe: "Hello there. I am Zeke. I build responsive, optimized, beautiful, handcrafted websites. I'd love to do it for you.",
+    welcomeMessage: "Hello there. I am Zeke. I build responsive, optimized, beautiful, handcrafted websites. I'd love to do it for you.",
     skills: [
         "HTML",
         "CSS",
@@ -20,10 +20,37 @@ var bio = {
         "Twitter Bootstrap",
         "Git and Github"
     ],
+    pic: "images/fry.jpg",
     display: function() {
         console.log("displaying Bio");
     }
 };
+HTMLheaderRole = HTMLheaderRole.replace("%data%", bio.role);
+$("#header").prepend(HTMLheaderRole);
+HTMLheaderName = HTMLheaderName.replace("%data%", bio.name);
+$("#header").prepend(HTMLheaderName);
+HTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#topContacts").append(HTMLmobile);
+HTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#topContacts").append(HTMLemail);
+HTMLgithub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#topContacts").append(HTMLgithub);
+HTMLtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+$("#topContacts").append(HTMLtwitter);
+HTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#topContacts").append(HTMLlocation);
+
+HTMLbioPic = HTMLbioPic.replace("%data%", bio.pic);
+$("#header").append(HTMLbioPic);
+HTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(HTMLwelcomeMsg);
+$("#header").append(HTMLskillsStart);
+
+bio.skills.forEach(function(el){
+    var HTMLskillsFormatted = HTMLskills.replace("%data%", el);
+    $("#skills").append(HTMLskillsFormatted);
+});
+
 
 var education = {
     schools: [{

@@ -112,8 +112,9 @@ var education = {
     ],
     display: function() {
         console.log("displaying online courses");
-        $("#education").append(HTMLschoolStart);
+
         this.schools.forEach(function(el) {
+            $("#education").append(HTMLschoolStart);
             var schoolNameFormatted = HTMLschoolName.replace("%data%", el.name);
             $(".education-entry:last").append(schoolNameFormatted);
             var schoolDegreeFormatted = HTMLschoolDegree.replace("%data%", el.degree);
@@ -125,6 +126,19 @@ var education = {
             var schoolMajorFormatted = HTMLschoolMajor.replace("%data%", el.majors);
             $(".education-entry:last").append(schoolMajorFormatted);
             $(".education-entry:last").find("a").attr("href", el.url);
+
+        });
+        $("#education").append(HTMLonlineClasses);
+        $("#education").append(HTMLschoolStart);
+        this.onlineCourses.forEach(function(el) {
+            $("#education").append(HTMLschoolStart);
+            var onlineTitleFormatted = HTMLonlineTitle.replace("%data%", el.title);
+            var onlineSchoolFormatted = HTMLonlineSchool.replace("%data%", el.school);
+            $(".education-entry:last").append(onlineTitleFormatted + onlineSchoolFormatted);
+            var onlineDates = HTMLonlineDates.replace("%data%", el.dates);
+            $(".education-entry:last").append(onlineDates);
+            var onlineUrl = HTMLonlineURL.replace("%data%", el.url);
+            $(".education-entry:last").append(onlineUrl + "<hr>");
 
         });
     }

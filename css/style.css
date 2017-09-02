@@ -232,5 +232,5 @@ span {
 .biopic {
     -webkit-border-radius: 15% 40% 15%;
     -moz-border-radius: 15% 40% 15%;
-    border-radius: 15% 40% 15%;
+    border-radius: 15%;
 }

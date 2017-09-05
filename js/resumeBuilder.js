@@ -140,7 +140,6 @@ var education = {
             $(".education-entry:last").append(onlineDates);
             var onlineUrl1 = HTMLonlineURL1.replace(data, el.url);
             var onlineUrl2 = HTMLonlineURL2.replace(data, el.url);
-            console.log(onlineUrl1 + onlineUrl2);
             $(".education-entry:last").append(onlineUrl1+onlineUrl2 + "<hr>");
 
         });
@@ -268,6 +267,10 @@ var projects = {
         this.projects.forEach(function(el) {
             $("#projects").append(HTMLprojectStart);
             var titleFormatted = HTMLprojectTitle.replace(data, el.title);
+          
+             titleFormatted = titleFormatted.replace('#', el.url);
+           
+            //titleFormatted.attr("href", el.url);
             $(".project-entry:last").append(titleFormatted);
             var datesFormatted = HTMLprojectDates.replace(data, el.dates);
             $(".project-entry:last").append(datesFormatted);

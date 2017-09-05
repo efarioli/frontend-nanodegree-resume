@@ -138,8 +138,10 @@ var education = {
             $(".education-entry:last").append(onlineTitleFormatted + onlineSchoolFormatted);
             var onlineDates = HTMLonlineDates.replace(data, el.dates);
             $(".education-entry:last").append(onlineDates);
-            var onlineUrl = HTMLonlineURL.replace(data, el.url);
-            $(".education-entry:last").append(onlineUrl + "<hr>");
+            var onlineUrl1 = HTMLonlineURL1.replace(data, el.url);
+            var onlineUrl2 = HTMLonlineURL2.replace(data, el.url);
+            console.log(onlineUrl1 + onlineUrl2);
+            $(".education-entry:last").append(onlineUrl1+onlineUrl2 + "<hr>");
 
         });
     }

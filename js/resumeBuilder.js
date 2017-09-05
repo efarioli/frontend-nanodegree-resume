@@ -194,7 +194,8 @@ var projects = {
             description: "Badges display app: using Jquery to make AJAX request to the CodeSchool API, and manipulating Json objects to display all the certification I have by completing the courses.",
             images: [
                 "http://i.imgur.com/Ag7gGA6.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/jQueryBadgesProject/"
         },
         {
             title: "Classifieds Single Page Application",
@@ -202,7 +203,8 @@ var projects = {
             description: "Classifieds Single Page Application (SPA) using AngularJs, Angular Material design for rapid prototype and look. Connected to Firebase Cloud database, allowing to persist data and make CRUD operations.",
             images: [
                 "http://i.imgur.com/sMrn1oo.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/AngularJs-Project02/#!/classifieds"
         },
         {
             title: "Content Slider",
@@ -210,7 +212,8 @@ var projects = {
             description: "Content Slider: using jQuery and styling with CSS, show a new background image with the corresponding description automatically after 5 seconds, or by clicking the previous or next arrows. See project Content Slider",
             images: [
                 "http://i.imgur.com/3MtKAE8.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/contentSlider/"
         },
         {
             title: "Jquery Apple Style ThumbSlider",
@@ -218,7 +221,8 @@ var projects = {
             description: "Jquery Apple Style ThumbSlider, displaying an image with the possibility of select the thumb image to show , with an auto slider function, displaying the next image after 4 seconds. I have used Html5, CSS, Javascript and Jquery. See project Jquery Apple Style ThumbSlider",
             images: [
                 "http://i.imgur.com/sV83ute.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/appleSlider/"
         },
         {
             title: "RGB color game",
@@ -226,7 +230,8 @@ var projects = {
             description: "RGB color game: 6 color are generated randomly, one of this is the color to looking based in the RGB system color. The game finish when the user choose the right color. The objective of this project is to use plain Javascript to Manipulating the DOM and handle events. This is achieved without using jQuery.",
             images: [
                 "http://i.imgur.com/X066JIo.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/colorGame/"
         },
         {
             title: "Template Store app",
@@ -234,7 +239,8 @@ var projects = {
             description: "Template Store app: simple AngularJs app that simulate a online shop that sell templates.",
             images: [
                 "http://i.imgur.com/dBjaX9t.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/templateStore/#/templates"
         },
         {
             title: "Todo list app",
@@ -242,7 +248,8 @@ var projects = {
             description: "Todo list app: using AngularJS and Twitter-boostrap for styling.",
             images: [
                 "http://i.imgur.com/MQNURWX.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/todoListApp/"
         },
         {
             title: "Video Searcher",
@@ -251,7 +258,8 @@ var projects = {
             images: [
                 "http://i.imgur.com/XbbFCqx.png",
                 "http://i.imgur.com/XbbFCqx.png"
-            ]
+            ],
+            url: "https://efarioli.github.io/searchVidz/"
         }
     ],
     display: function() {

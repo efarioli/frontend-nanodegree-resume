@@ -1,3 +1,6 @@
+* {
+    boder: 1px solid red;
+}
 *,
 body,
 div,
@@ -20,7 +23,7 @@ h6 {
 }
 
 #header {
-  margin: 75px;
+  margin-top: 60px;
 }
 
 #header > h3{
@@ -175,9 +178,6 @@ img {
   padding: 10px;
 }
 
-span {
-  padding: 5px;
-}
 
 #lets-connect {
   text-align: center;
@@ -185,6 +185,7 @@ span {
 
 /* Media queries to handle various device widths */
 
+/*
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
@@ -208,6 +209,7 @@ span {
     display: none;
   }
 }
+*/
 
 #map {
   display: block;
@@ -218,7 +220,7 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+/*  padding-bottom: 30%;*/
 }
 
 @media only screen and (min-width: 750px) {
@@ -229,12 +231,34 @@ span {
 }
 /*My styles*/
 .project-entry > img {
-  max-width: 480px;
-  display: block;
   margin: 0 auto;
 }
 .biopic {
     -webkit-border-radius: 15% 40% 15%;
     -moz-border-radius: 15% 40% 15%;
     border-radius: 15%;
+}
+
+#projects,
+#mapDiv {
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+}
+#my-navbar {
+    margin: 0;
+    padding: 0;
+}
+.navbar .container {
+padding: 0 30px;    
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  border-radius: 15px 15px 0 0;
+}
+
+.row h2 {
+    border-left: 1px solid silver;
+        border-right: 1px solid silver;
+
 }

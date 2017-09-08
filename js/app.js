@@ -16,11 +16,7 @@ $(document).ready(function() {
         scrollLink.each(function(){
 
             var sectionOffset = $(this.hash).offset().top;
-            console.log("/////////////////");
-            console.log(sectionOffset);
-            console.log(this.hash);
-            console.log(this);
-            console.log("/////////////////");
+            
            // console.log(sectionOffset);
             if (sectionOffset <= (scrollbarLocation +80)){
                 $(this).parent().addClass('active');
@@ -29,6 +25,12 @@ $(document).ready(function() {
 
         });
 
+    });
+    //To close navabar when I click button in mobile size
+    $('.scroll').on('click', function(){
+        $('#navbar').removeClass('in');
+        //$('#navbar').attr('aria-expanded', false);
+        
     });
 });
  

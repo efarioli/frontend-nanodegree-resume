@@ -139,7 +139,7 @@ var education = {
             var onlineDates = HTMLonlineDates.replace(data, el.dates);
             $(".education-entry:last").append(onlineDates);
             var onlineUrl1 = HTMLonlineURL1.replace(data, el.url);
-            var onlineUrl2 = HTMLonlineURL2.replace(data, el.url);
+            var onlineUrl2 = HTMLonlineURL2.replace(data, el.title);
             $(".education-entry:last").append(onlineUrl1+onlineUrl2 + "<hr>");
 
         });
@@ -173,6 +173,7 @@ var work = {
         console.log("displaying jobs..");
         this.jobs.forEach(function(el) {
             $("#workExperience").append(HTMLworkStart);
+            
             var employerFormatted = HTMLworkEmployer.replace(data, el.employer);
             var titleFormatted = HTMLworkTitle.replace(data, el.title);
             $(".work-entry:last").append(employerFormatted + titleFormatted);
